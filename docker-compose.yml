@@ -1,0 +1,10 @@
+services:
+  solana-scheduler-measurer:
+    build: .
+    container_name: solana-scheduler-measurer
+    environment:
+      - DRY_RUN=true
+      - MAX_SPEND_SOL=0.05
+      - SOLANA_RPC_URL=https://api.mainnet-beta.solana.com
+    volumes:
+      - ./data:/app/data
